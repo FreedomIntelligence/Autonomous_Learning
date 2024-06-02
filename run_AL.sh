@@ -1,11 +1,9 @@
-# run open-book learning
-accelerate launch --main_process_port 29502 \
-    --config_file recipes/accelerate_configs/deepspeed_zero3_sft.yaml \
-    my_scripts/run_open_book.py \
-    recipes/run_AL/open_book/config_full_en.yaml
+# stage 1
+## run open-book learning
+bash run_scripts/run_open_book_DQA.sh
 
-# run closed-book learning
-accelerate launch --main_process_port 29502 \
-    --config_file recipes/accelerate_configs/deepspeed_zero3.yaml \
-    my_scripts/run_closed_book.py \
-    recipes/run_AL/closed_book/config_full_en.yaml
+bash run_scripts/run_open_book_QA.sh
+
+# stage 2
+## run closed-book learning
+bash run_scripts/run_closed_book.sh
