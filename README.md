@@ -1,8 +1,8 @@
-#
+# Autonomous Learning (AL)
 This is the official repository for the paper 'LLMs Could Autonomously Learn Without External Supervision'.
 ![Autonomous Learning](./image/AL_Overview.png)
 
-# Requirements
+## Requirements
 
 * Python == 3.10.13
 * torch == 2.0.1
@@ -13,44 +13,21 @@ This is the official repository for the paper 'LLMs Could Autonomously Learn Wit
 * trl == 0.7.4
 * accelerate == 0.23.2
 
-# Preprocess
-
-## Split the data resource into multiple documents
+## run
 ```
-python data_generator/data_book.py
+bash run_AL.sh
 ```
 
-## Filter documents greater than 512
-```
-python data_generator/filter.py
-```
 
-# Stage 1: Open-Book learning
+## Reproducibility
+We experiment on 8 Tesla A100-80GB GPU.
 
-## D->QA
-```
-accelerate launch models/vllm_predict.py
-```
+## Bugs or Questions?
+If you have any questions related to the code or the paper, feel free to email Ke Ji (jike@cuhk.edu.cn).
 
-## Perform self-understanding
-```
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file recipes/accelerate_configs/deepspeed_zero3.yaml my_scripts/run_open_book.py recipes/run_MedQA_book_cn/sft/config_full_en.yaml
-```
+## Citation
+Please cite our paper if you find the repo helpful in your work:
 
-# Stage 2: Closed-Book learning
-```
-bash run_closed_book.sh
-```
-# Eval
-```
-accelerate launch eval/test_single_choice.py
-```
-
-# Reproducibility
-We experiment on 8 Tesla A100-80GB.
-
-# Citation
-If you found this repository is helpful, please cite our paper:
-```
+```bibtex
 
 ```
