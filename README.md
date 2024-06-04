@@ -1,6 +1,8 @@
 # Autonomous Learning (AL)
 This is the official repository for the paper 'LLMs Could Autonomously Learn Without External Supervision'.
-![Autonomous Learning](./image/AL_Overview.png)
+<div align=center>
+<img src="./image/AL_Overview.png" width = "75%" alt="Autonomous Learning" align=center/>
+</div>
 
 ## Requirements
 
