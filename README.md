@@ -31,5 +31,10 @@ If you have any questions related to the code or the paper, feel free to email K
 Please cite our paper if you find the repo helpful in your work:
 
 ```bibtex
-
+@article{ji2024llms,
+  title={LLMs Could Autonomously Learn Without External Supervision},
+  author={Ji, Ke and Chen, Junying and Gao, Anningzhe and Xie, Wenya and Wan, Xiang and Wang, Benyou},
+  journal={arXiv preprint arXiv:2406.00606},
+  year={2024}
+}
 ```
