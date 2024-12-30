@@ -25,7 +25,7 @@ bash run_AL.sh
 We experiment on 8 Tesla A100-80GB GPU.
 
 ## Bugs or Questions?
-If you have any questions related to the code or the paper, feel free to email Ke Ji (jike@cuhk.edu.cn).
+If you have any questions related to the code or the paper, feel free to email Ke Ji (keji@link.cuhk.edu.cn).
 
 ## Citation
 Please cite our paper if you find the repo helpful in your work:
